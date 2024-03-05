@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary: #3663bf;
+$info: #559bd9;
+$danger: #261414;
+$warning: #556d84;
+
+$secondary: #e9ecef;
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// @media (max-width: 410px) {
+//   html {
+//     font-size: 80%;
+//   }
+// }
+
+body {
+  background-color: $light;
+}

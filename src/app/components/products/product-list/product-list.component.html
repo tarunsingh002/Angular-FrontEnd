@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <app-search></app-search>
+    <div *ngIf="!products.length" class="w-100 no-products d-flex align-items-center justify-content-center">
+        <h3 class="display-3 text-center">There are currently no products for your search query</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-xl-4 mb-4" *ngFor="let product of products; let i = index">
+            <div class="card">
+                <img [src]="product.url">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{product.name}}</h5>
+                    <h6 class="card-subtitle text-center">{{"Price: $"+product.price}}</h6>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-block btn-info mx-2 my-2" [routerLink]="['/products',i]">Details</button>
+                    <button class="btn btn-block btn-primary mx-2 my-2" *ngIf="!webmaster && auth"
+                        (click)="addToCart(product)">Add to Cart</button>
+                    <button class="btn btn-block btn-secondary mx-2 my-2" *ngIf="!webmaster && auth && !wishListed[i]"
+                        (click)="addToWishList(product)">Add to Wishlist</button>
+                    <button class="btn btn-block btn-danger mx-2 my-2" *ngIf="!webmaster && auth && wishListed[i]"
+                        (click)="removeFromWishList(product)">Remove From Wishlist</button>
+                    <button class="btn btn-block btn-danger mx-2 my-2" *ngIf="webmaster"
+                        (click)="onDelete(i)">Delete</button>
+                    <button class="btn btn-block btn-warning mx-2 my-2" *ngIf="webmaster"
+                        [routerLink]="['/products',i,'edit']">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
