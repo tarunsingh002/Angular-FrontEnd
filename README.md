@@ -1,6 +1,6 @@
 ## Project Working Link
 
-https://ng-ecommerce-store.vercel.app/
+https://store4.vercel.app/
 
 ## User Email and Password to test out various features:
 
