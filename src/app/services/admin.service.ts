@@ -18,7 +18,7 @@ export interface wishlist {
   providedIn: "root",
 })
 export class AdminService {
-  api: string = apiUrl + `${apiUrl}/api/v1`;
+  api: string = `${apiUrl}/api/v1`;
   constructor(private http: HttpClient, private AuthS: AuthService) {}
 
   loadAllOrders() {
