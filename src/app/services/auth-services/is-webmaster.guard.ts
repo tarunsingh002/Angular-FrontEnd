@@ -30,7 +30,7 @@ export class IsWebmasterGuard implements CanActivate {
         else if (!!user && !user.webmaster) {
           this.authS.logout();
           return this.router.createUrlTree(["/auth"]);
-        } else if (!user) this.router.createUrlTree(["/auth"]);
+        } else if (!user) return this.router.createUrlTree(["/auth"]);
       })
     );
   }
