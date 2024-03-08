@@ -25,8 +25,8 @@ export class AuthComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._email = "test@test.com";
-    this._password = "tester";
+    this._email = "user@gmail.com";
+    this._password = "user1234";
   }
 
   formSubmitted(form: NgForm) {
