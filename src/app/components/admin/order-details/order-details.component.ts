@@ -22,20 +22,18 @@ export class OrderDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.aroute.params
       .pipe(
-        mergeMap((params) =>
-          this.adminService.getOrder(params["id"]).pipe(
-            map((order: order) => {
-              this.total = 0;
-              console.log(order);
-              order.orderItems.forEach((i) => {
-                this.total = this.total + i.product.price * i.quantity;
-              });
-              this.order = order;
-              this.date = new Date(order.timestamp).toDateString();
-            })
-          )
-        )
+        map((params) => {
+          let orders: order[] = this.aroute.snapshot.data["res"];
+          this.order = orders.find((o) => o.orderId === +params["id"]);
+          this.total = 0;
+          this.order.orderItems.forEach((i) => {
+            this.total = this.total + i.product.price * i.quantity;
+          });
+
+          this.date = new Date(this.order.timestamp).toDateString();
+        })
       )
+
       .subscribe();
   }
 }

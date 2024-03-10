@@ -62,7 +62,7 @@ export class BuyProductComponent implements OnInit, OnDestroy {
       this.cartTotal = t;
 
       this._address = "200, Fictional Street, Gurugram";
-      this._nameOnCard = "Testy Tester";
+      this._nameOnCard = "User user";
       this._cardNumber = 1234567890123456;
       this._expiryDate = "11/27";
     });

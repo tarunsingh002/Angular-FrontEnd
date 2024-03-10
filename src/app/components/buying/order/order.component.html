@@ -5,18 +5,18 @@
     <div *ngIf="displayCarts.length" class="mb-5">
         <div class="lead text-center mb-3">Hello, {{user.email}} here are your previous orders: </div>
         <div *ngFor="let cart of displayCarts; let i=index">
-            <h3 class="display-4 text-center">{{"Order "+(i+1)}}</h3>
+            <h3 class="display-5 text-center">{{"Order "+(i+1)}}</h3>
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between">
                     <span>Order Date:</span>
                     <span>{{cart.timestamp}}</span>
                 </div>
-                <ul class="list-group">
+                <ul class="list-group list-group-flush">
                     <li class="list-group-item d-flex justify-content-between"
                         *ngFor="let p of cart.orderItems; let j = index">
                         <span>{{p.product.name}}</span>
                         <div class="d-flex justify-content-between">
-                            <span class="ml-2 mr-5">{{"$"+p.product.price}}</span>
+                            <span class="ms-2 me-5">{{"$"+p.product.price}}</span>
                             <span>{{"Quantity :"+p.quantity}}</span>
                         </div>
                     </li>
