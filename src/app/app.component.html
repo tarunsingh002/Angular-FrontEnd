@@ -23,7 +23,7 @@
                     <li class="nav-item">
                         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
                             routerLink="/buying/cart">Cart
-                            <span *ngIf="!!items" class="badge text-bg-primary">{{items}}</span></a>
+                            <span *ngIf="!!items" class="badge text-bg-secondary">{{items}}</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
@@ -51,29 +51,6 @@
         </div>
     </nav>
 
-
-    <!-- <div class="bg-secondary nav nav-tabs">
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/products"
-            [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/miscellaneous/aboutus">About</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
-            routerLink="/buying/orders">Orders</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth" routerLink="/buying/cart">Cart
-            <span *ngIf="!!items" class="badge badge-primary">{{items}}</span></a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
-            routerLink="/products/create">Create</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
-            routerLink="/admin/allorders">Orders</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
-            routerLink="/admin/allwishlisted">WishLists</a>
-        <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
-            routerLink="/products/wishlist">Wishlist</a>
-
-        <div class="auth ml-auto mr-2">
-            <button class="btn btn-primary" (click)="onLogin()" *ngIf="!auth && !loadedAuthPage">Login</button>
-            <button class="btn btn-danger" (click)="onLogout()" *ngIf="auth">Logout</button>
-        </div>
-    </div> -->
 </header>
 
 <main>
