@@ -6,6 +6,7 @@ import { catchError, tap } from "rxjs/operators";
 import { Router } from "@angular/router";
 import { UserService } from "./user.service";
 import { apiUrl } from "src/app/apiutility";
+import { CartPageService } from "../cart-page.service";
 
 export interface responseData {
   id: number;
@@ -23,7 +24,7 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private userS: UserService
+    private cartPageService: CartPageService
   ) {}
 
   tokenExpirationTimer;
@@ -162,6 +163,7 @@ export class AuthService {
 
   logout() {
     this.User.next(null);
+    this.cartPageService.cartChanged.next(null);
     localStorage.removeItem("userData");
     localStorage.removeItem("cart");
     this.router.navigate(["auth"]);
