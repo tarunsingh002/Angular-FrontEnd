@@ -43,7 +43,7 @@
                     </li>
                 </ul>
                 <div class="auth ms-auto me-2">
-                    <button class="btn btn-primary" (click)="onLogin()" *ngIf="!auth && !loadedAuthPage">Login</button>
+                    <button class="btn btn-danger" (click)="onLogin()" *ngIf="!auth && !loadedAuthPage">Login</button>
                     <button class="btn btn-danger" (click)="onLogout()" *ngIf="auth">Logout</button>
                 </div>
 
