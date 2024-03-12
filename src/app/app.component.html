@@ -23,7 +23,7 @@
                     <li class="nav-item">
                         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="!webmaster && auth"
                             routerLink="/buying/cart">Cart
-                            <span *ngIf="!!items" class="badge text-bg-secondary">{{items}}</span></a>
+                            <span *ngIf="!!items" class="badge text-dark bg-secondary">{{items}}</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item nav-link" routerLinkActive="active" *ngIf="webmaster"
@@ -46,7 +46,6 @@
                     <button class="btn btn-danger" (click)="onLogin()" *ngIf="!auth && !loadedAuthPage">Login</button>
                     <button class="btn btn-danger" (click)="onLogout()" *ngIf="auth">Logout</button>
                 </div>
-
             </div>
         </div>
     </nav>

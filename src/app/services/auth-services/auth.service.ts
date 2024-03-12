@@ -180,10 +180,13 @@ export class AuthService {
 
   autoLogin() {
     const obj = JSON.parse(localStorage.getItem("userData"));
+    const obj2 = JSON.parse(localStorage.getItem("cart"));
 
-    if (!obj) {
-      return;
-    }
+    if (!obj2) this.cartPageService.cartChanged.next(null);
+    else this.cartPageService.cartChanged.next(obj2);
+
+    if (!obj) return;
+
     const loadedUser = new User(
       obj.id,
       obj.email,

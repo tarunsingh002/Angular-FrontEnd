@@ -69,7 +69,7 @@ export class ProductDetailComponent implements OnInit {
       return;
     }
     let quantity = f.value.quantity;
-    this.cservice.addToCart(this.product.productId, quantity);
+    this.cservice.addToCart(this.product.productId, +quantity);
     this.router.navigate(["/buying/cart"]);
   }
 
