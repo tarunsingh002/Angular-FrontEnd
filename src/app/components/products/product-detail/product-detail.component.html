@@ -1,6 +1,6 @@
 <div class="container">
     <div class="border my-5">
-        <div class="row g-0">
+        <div class="row no-gutters">
             <div class="col-lg-6">
                 <img class="w-100" [src]="product.url">
             </div>
@@ -22,7 +22,7 @@
                     <div class="card-footer">
                         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                             <div class="mb-3">
-                                <label class="mb-2" for="quantity">Quantity</label>
+                                <label class="form-label" for="quantity">Quantity</label>
                                 <select name="quantity" id="quantity" [(ngModel)]="q" class="form-control">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -32,19 +32,19 @@
                                     <option value="6">6</option>
                                 </select>
                             </div>
-                            <div class="d-grid">
-                                <button type="submit" [disabled]="!auth || webmaster"
-                                    class="btn btn-block btn-primary mt-2">Add
-                                    to
-                                    Cart</button>
-                                <button type="button" *ngIf="!wishlisted && !(!auth || webmaster)"
-                                    class="btn btn-block btn-info mt-2" (click)="addToWishList()">Add
-                                    to Wishlist</button>
-                                <button type="button" *ngIf="wishlisted && !(!auth || webmaster)"
-                                    class="btn btn-block btn-danger mt-2 mb-2" (click)="removeFromWishList()">Remove
-                                    from
-                                    Wishlist</button>
-                            </div>
+
+                            <button type="submit" [disabled]="!auth || webmaster"
+                                class="btn btn-block btn-primary mt-2">Add
+                                to
+                                Cart</button>
+                            <button type="button" *ngIf="!wishlisted && !(!auth || webmaster)"
+                                class="btn btn-block btn-info mt-2" (click)="addToWishList()">Add
+                                to Wishlist</button>
+                            <button type="button" *ngIf="wishlisted && !(!auth || webmaster)"
+                                class="btn btn-block btn-danger mt-2 mb-2" (click)="removeFromWishList()">Remove
+                                from
+                                Wishlist</button>
+
                         </form>
                     </div>
                 </div>
