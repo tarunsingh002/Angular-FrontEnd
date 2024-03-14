@@ -5,3 +5,7 @@ app-loading-spinner {
 footer {
   height: 11vh;
 }
+
+footer a {
+  text-decoration: none;
+}
