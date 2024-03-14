@@ -11,7 +11,7 @@
                 *ngFor="let i of order?.orderItems; let j = index">
                 <span>{{i.product.name}}</span>
                 <div class="d-flex justify-content-between">
-                    <span class="ms-2 me-5">{{"$"+i.product.price}}</span>
+                    <span class="ml-2 mr-5">{{"$"+i.product.price}}</span>
                     <span>{{"Quantity :"+i.quantity}}</span>
                 </div>
             </li>

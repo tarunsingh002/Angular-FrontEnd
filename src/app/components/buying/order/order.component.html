@@ -16,7 +16,7 @@
                         *ngFor="let p of cart.orderItems; let j = index">
                         <span>{{p.product.name}}</span>
                         <div class="d-flex justify-content-between">
-                            <span class="ms-2 me-5">{{"$"+p.product.price}}</span>
+                            <span class="ml-2 mr-5">{{"$"+p.product.price}}</span>
                             <span>{{"Quantity :"+p.quantity}}</span>
                         </div>
                     </li>
