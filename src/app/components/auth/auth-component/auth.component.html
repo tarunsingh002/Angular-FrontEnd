@@ -6,13 +6,13 @@
                 {{errorMessage}}
             </div>
             <form #authForm="ngForm" (ngSubmit)="formSubmitted(authForm)">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
+                <div class="form-group">
+                    <label for="email">Email</label>
                     <input type="email" name="email" [(ngModel)]="_email" id="email" required class="form-control"
                         placeholder="Enter your email" #email="ngModel">
                     <small *ngIf="email.invalid && email.touched">Enter a valid email</small>
                 </div>
-                <div class="mb-3">
+                <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" name="password" [(ngModel)]="_password" id="password" required
                         class="form-control" placeholder="Enter your password" minlength="6" #password="ngModel">
