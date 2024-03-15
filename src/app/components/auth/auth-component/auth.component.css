@@ -6,8 +6,9 @@ input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
-small {
+.validation {
   color: red;
+  display: block;
 }
 
 .container {
